@@ -47,7 +47,7 @@ router.put('/:id', async (req, res) => {
       },
     });
     if (categoryData === 0) {
-      res.status(400).json({ message: "No Category with this id!" });
+      res.status(400).json({ message: "catagory ID does not exist" });
       return;
     }
     res.status(200).json(categoryData);
@@ -65,13 +65,13 @@ router.delete("/:id", async (req, res) => {
       },
     });
     if (!categoryData) {
-      res.status(400).json({ message: "No Category with this id!" });
+      res.status(400).json({ message: "catagory ID does not exist" });
       return;
     }
-    res.json({ message: "Successfully deleted Category" });
+    res.json({ message: "deleted" });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Server error" });
+    res.status(500).json({ error: "error" });
   }
 });
 

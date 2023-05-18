@@ -46,7 +46,7 @@ router.put("/:id", async (req, res) => {
       },
     });
     if (tagData === 0) {
-      res.status(400).json({ message: "No Category with this id!" });
+      res.status(400).json({ message: "catagory ID does not exist" });
       return;
     }
     res.status(200).json(tagData);
@@ -64,13 +64,13 @@ router.delete("/:id", async (req, res) => {
       },
     });
     if (!tagData) {
-      res.status(400).json({ message: "No Tag with this id!" });
+      res.status(400).json({ message: "Tag ID does not exist" });
       return;
     }
-    res.json({ message: "Successfully deleted Tag" });
+    res.json({ message: "Tag deleted" });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Server error" });
+    res.status(500).json({ error: "error" });
   }
 });
 

@@ -110,13 +110,13 @@ router.delete("/:id", async (req, res) => {
       },
     });
     if (!productData) {
-      res.status(400).json({ message: "No Product with this id!" });
+      res.status(400).json({ message: "product ID does not exist" });
       return;
     }
-    res.json({ message: "Successfully deleted Product" });
+    res.json({ message: "product deleted" });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Server error" });
+    res.status(500).json({ error: "error" });
   }
 });
 
