@@ -4,6 +4,7 @@
   
   ## Description
   The Second Team e-Commerce app allows production to manage marketing assets associated with the project.
+  Link to video: https://drive.google.com/file/d/1cq5V_tILrEiJoARF0Cwf1ytC5Ck2ehTQ/view
   
   ## Table of Contents
   - [Installation](#installation)
